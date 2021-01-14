@@ -79,14 +79,14 @@
 
 # Filter函数：对可迭代对象中的元素按照特定的条件进行筛选（例如筛选列表中所有的偶数等等）
 
-num = [x for x in range(6)]
-# def is_even(n):
-#     if n % 2 == 0:
-#         return True
-#     return False
+# num = [x for x in range(6)]
+# # def is_even(n):
+# #     if n % 2 == 0:
+# #         return True
+# #     return False
 
-# even_num = filter(is_even,num)
-# print(list(even_num))
+# # even_num = filter(is_even,num)
+# # print(list(even_num))
 
-ll = filter(lambda x : x % 2 == 0, num)
-print(list(ll))
+# ll = filter(lambda x : x % 2 == 0, num)
+# print(list(ll))
