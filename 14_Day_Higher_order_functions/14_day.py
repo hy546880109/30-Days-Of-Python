@@ -59,16 +59,34 @@
 
 # print(get_message())
 
-# Map函数
-
+# Map函数:对可迭代器或者序列中的每个元素进行相同的操作（例如每个元素+1等等），并返回迭代器或者列表
+#示例1
 # num = [x for x in range(6)]
-# def square(x):
-#     return x**2
-# num_square = map(square, num)
-# print(list(num_square))
+# # def square(x):
+# #     return x**2
+# # num_square = map(square, num)
+# # print(list(num_square))
+# #示例2
+# # nums = map(lambda x:x**2,num)
+# # print(list(nums))
+# #示例3        
+# number = map(str,num)
+# print(list(number))
+# #示例4
+# lang = ['python','java','javascript']
+# li = map(lambda x: x.title(), lang)
+# print(list(li))
 
-# nums = map(lambda x:x**2,num)
-# print(list(nums))
-        
+# Filter函数：对可迭代对象中的元素按照特定的条件进行筛选（例如筛选列表中所有的偶数等等）
 
-#
+num = [x for x in range(6)]
+# def is_even(n):
+#     if n % 2 == 0:
+#         return True
+#     return False
+
+# even_num = filter(is_even,num)
+# print(list(even_num))
+
+ll = filter(lambda x : x % 2 == 0, num)
+print(list(ll))
