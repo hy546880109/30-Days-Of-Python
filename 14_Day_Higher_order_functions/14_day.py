@@ -168,16 +168,19 @@ def country_dict():
 # 按国名、资本、人口对国家进行排序
 # 根据地理位置选出十种最常被使用的语言
 # 选出人口最多的十个国家
-f = open(r'C:\Users\Administrator\Desktop\learn\30-Days-Of-Python\data\countries-data.py',
+f = open(r'C:\Users\haiy\Desktop\30-Days-Of-Python\data\countries-data.py',
          'r', encoding='utf8')
 file = f.read()
 js = json.loads(file)
-l = []
-for i in range(len(js)):
-    # print(js[i]['name'])
-    # l.append(js[i]['name'])
-    l.append(js[i]['population'])
-l.sort()
-print(l)
 
+listA = sorted(js, key = lambda i: i['population'])
+listB = sorted(js, key= lambda i : i['capital'])
+listC = sorted(js, key= lambda i : i['name'])
+
+for i in range(len(js)):
+    listD = i[0]['languages']
+# print(listA)
+# print(listB)
+# print(listC)
+print(listD)
 f.close()

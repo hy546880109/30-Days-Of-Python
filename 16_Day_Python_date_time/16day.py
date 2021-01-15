@@ -2,24 +2,29 @@
 
 # 1.从 datetime 模块获取当前日期、月份、年份、小时、分钟和时间戳
 
-from datetime import datetime
-now = datetime.now()
-month = now.month
-year = now.year
-hour = now.hour
-minute = now.minute
-second = now.second
-time = now.time
-print(now)
-print(month)
-print(year)
-print(hour)
-print(minute)
-print(second)
-print(time)
+# from datetime import datetime
+# now = datetime.now()
+# month = now.month
+# year = now.year
+# hour = now.hour
+# minute = now.minute
+# second = now.second
+
+# print(now)
+# print(month)
+# print(year)
+# print(hour)
+# print(minute)
+# print(second)
+
 
 
 # 2.使用此格式设置当前日期的格式: “% m/% d/% y,% h:% m:% s”)
+
+from datetime import datetime
+now = datetime.now()
+t = now.strftime('%m/%d/%Y, %H:%M:%S')
+print(t)
 
 # 3.今天是2019年12月5日。将这个时间字符串更改为 time
 
