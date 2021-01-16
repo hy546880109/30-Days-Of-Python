@@ -168,19 +168,75 @@ def country_dict():
 # 按国名、资本、人口对国家进行排序
 # 根据地理位置选出十种最常被使用的语言
 # 选出人口最多的十个国家
-f = open(r'C:\Users\haiy\Desktop\30-Days-Of-Python\data\countries-data.py',
+
+f = open(r'data\countries-data.py',
          'r', encoding='utf8')
 file = f.read()
 js = json.loads(file)
 
-listA = sorted(js, key = lambda i: i['population'])
-listB = sorted(js, key= lambda i : i['capital'])
-listC = sorted(js, key= lambda i : i['name'])
+# listA = sorted(js, key = lambda i: i['population']) #按国名进行排序
+# listB = sorted(js, key= lambda i : i['capital'])    #按资本进行排序
+# listC = sorted(js, key= lambda i : i['name'])       #按人口进行排序
+# # print(listA)
+# # print(listB)
+# # print(listC)
+# ls = []
+# for i in range(len(js)):
+#     listD = js[i]['languages']  #取出languages的值存放列表
+#     ls.append(listD)
+# li = []
+# for x in ls:
+#     for s in x:
+#         li.append(s)    #从上面的列表再在取出
+# d = {}
+# ss = {n for n in li}    #去除重复的
+# # print(ss)
+# for x in ss:
+#     c = li.count(x)
+#     d[x] = c            #将语言和出现的次数加入字典
+# l = []
+# for old_key in d:
+#     new_list = {'key':old_key, 'value':d[old_key]}  #生成新的内嵌字典的列表
+#     l.append(new_list)
+# listF = sorted(l, key= lambda i : i['value'], reverse=True)   #通过value进行排序
+# dd = {}
+# for m in listF:
+#     dd[m['key']] = m['value']   #通过key和value筛选出语言和出现次数存放在字典里
+# # print(dd)
+# for i,(k,v) in enumerate(dd.items()):   #字典取出前十个元素
+#     print({k:v},end=",")
+#     if i == 10:
+#         break
 
-for i in range(len(js)):
-    listD = i[0]['languages']
-# print(listA)
-# print(listB)
-# print(listC)
-print(listD)
+
+
+new_li = []
+for people in js:
+    new_dict = {}
+    # print(people['name'],people['population'])
+    new_dict = {'key':people['name'] , 'value':people['population']}
+    new_li.append(new_dict)
+listG = sorted(new_li, key= lambda i : i['value'], reverse=True)
+dict_people = {}
+for y in listG:
+    dict_people[y['key']] = y['value']
+for i,(k,v) in enumerate(dict_people.items()):
+    print({k:v},end=',')
+    if i == 10:
+        break
+
+
+
+
+
+
+
+
+
+
+
+
+
 f.close()
+
+
