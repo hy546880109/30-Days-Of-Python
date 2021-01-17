@@ -1,13 +1,19 @@
 # 1.使用列表内涵过滤器只过滤列表中的负数和零
 # numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
+# listA = []
+# for i in numbers:
+#     if i > 0:
+#         listA.append(i)
+# print(listA)
 
 # numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
 # x = [x for x in numbers if x>0]
 # print(x)
 
-# 2.将以下列表展开成一维列表:
+# #2.将以下列表展开成一维列表:
+
 # list_of_lists =[[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]]]
-# list_of_lists =[[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]]]
+
 
 # l = [num for r in list_of_lists for num in r]
 # s = [num for r in l for num in r]
@@ -39,16 +45,12 @@
 
 # l = []
 # for i in countries:
-#     # print(i)
 #     for n in i:
-#         # print(n)    
 #         for m in n:
-#             # print(m)
 #             l.append(m)
 # print(l)
 
 # ls = [num for i in countries for num in i]
-# print(num)
 # ll = [num for i in ls for num in i]
 # print(ll)
 
@@ -75,12 +77,12 @@
 # output
 # ['Asabeneh Yetaeyeh', 'David Smith', 'Donald Trump', 'Bill Gates']
 
-names = [[('Asabeneh', 'Yetaeyeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+# names = [[('Asabeneh', 'Yetaeyeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
 
-ls = [num for i in names for num in i]
-kk = []
-for num in ls:
-    ss = ' '.join(num)
-    kk.append(ss)
-print(kk)
+# ls = [num for i in names for num in i]
+# kk = []
+# for num in ls:
+#     ss = ' '.join(num)
+#     kk.append(ss)
+# print(kk)
 
